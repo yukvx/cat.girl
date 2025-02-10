@@ -16,7 +16,8 @@ local libraryAssets = {
 Gradient = {
     gradient = "https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/gradient0.png";
     gradient180 = "https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/gradient180.png";
-    gradient130 = "https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/gradient130.png";
+    gradient130n = "https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/gradient(-130).png";
+    gradient90 = "https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/gradientR2L.png";
 };
 --
 Arrow = {
@@ -3618,7 +3619,7 @@ do
                     playerList.buttons[#playerList.buttons + 1] = button
                 end
                 --
-                utility:LoadImage(list_gradient, "gradient", libraryAssets.Gradient["gradient"])
+                utility:LoadImage(list_gradient, "gradient", libraryAssets.Gradient["gradient130n"])
                 --
                 function playerList:GetSelection()
                     for Index, Value in pairs(playerList.players) do
@@ -3897,7 +3898,8 @@ do
                     Color = "textcolor"
                 }
                 --
-                utility:LoadImage(toggle__gradient, "gradient", libraryAssets.Gradient["gradient"])
+                utility:LoadImage(toggle__gradient, "gradient", libraryAssets.Gradient["gradient130n"]
+                    )
                 --
                 function toggle:Get()
                     return toggle.current
@@ -4020,7 +4022,7 @@ do
                     if transp then
                         utility:LoadImage(colorpicker__transparency, "cptransp", libraryAssets.Colorpicker["colorpickerTransparent"])
                     end
-                    utility:LoadImage(colorpicker__gradient, "gradient", libraryAssets.Gradient["gradient"])
+                    utility:LoadImage(colorpicker__gradient, "gradient", libraryAssets.Gradient["gradient130n"])
                     --
                     function colorpicker:Set(color, transp_val)
                         if typeof(color) == "table" then
@@ -4866,7 +4868,7 @@ do
                     Color = "textcolor"
                 }
                 --
-                utility:LoadImage(slider__gradient, "gradient", libraryAssets.Gradient["gradient"])
+                utility:LoadImage(slider__gradient, "gradient", libraryAssets.Gradient["gradient09"])
                 --
                 function slider:Set(value)
                     local oldval = slider.current
