@@ -11,7 +11,7 @@ end;
 
 local Tween = loadstring(game:HttpGet("https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/tween.lua"))()
 local library = {};
-
+local window = {}
 local libraryAssets = {
 Gradient = {
     gradient = "https://raw.githubusercontent.com/yukvx/cat.girl/refs/heads/main/library%20assets/gradient0.png";
@@ -168,7 +168,11 @@ do
                     local text = Drawing.new("Text")
                     text.Font = 3
                     text.Visible = true
+                    if window.isVisible ~= true then
                     text.Outline = false
+                    else
+                    text.Outline = true
+                    end
                     text.Center = false
                     text.Color = Color3.fromRGB(255,255,255)
                     text.ZIndex = 50
@@ -481,7 +485,7 @@ do
                 --
                 theme.accent = accent
                 --
-                local window = {pages = {}, loader = true, isVisible = false, pageammount = pageammount, callback = callback, wminfo = "$$$$$ AntarcticaWare $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
+                window = {pages = {}, loader = true, isVisible = false, pageammount = pageammount, callback = callback, wminfo = "$$$$$ AntarcticaWare $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
                 --
                 local main_frame = utility:Create("Frame", {Vector2.new(0,0)}, {
                     Size = utility:Size(0, size.X, 0, size.Y),
