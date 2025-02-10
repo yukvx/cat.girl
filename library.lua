@@ -168,7 +168,7 @@ do
                     local text = Drawing.new("Text")
                     text.Font = 3
                     text.Visible = true
-                    text.Outline = true
+                    text.Outline = false
                     text.Center = false
                     text.Color = Color3.fromRGB(255,255,255)
                     text.ZIndex = 50
