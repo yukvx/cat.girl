@@ -661,7 +661,7 @@
          function image:_newImage(data, isUri)
              _taskspawn(function() -- this is fucked but u can't yield in a metamethod
                  self._imageId = self._imageId + 1;
-                 local path = _stringformat("%s-%s.kzc", self._id, self._imageId);
+                 local path = _stringformat("%s-%s.clrd", self._id, self._imageId);
                  if isUri then
                      local newData;
                      while newData == nil do
